@@ -66,20 +66,6 @@ docker compose exec -T db psql -U replication_user -d replication_db < data/data
 You can run individual scripts inside the container:
 
 ```bash
-# Test database connection
-docker compose run --rm research python program/test_db_connection.py
-
 # Run research question analysis (example)
 docker compose run --rm research python program/research_questions/rq2_coverage_count.py
 ```
-
-## 🗃️ Notes
-
-- All code is tested to run inside a Docker container.
-- The PostgreSQL service uses persistent volume storage (`pgdata`).
-- All credentials and sensitive data have been removed from the final dump `backup_clean.sql`.
-
-## 📄 License
-
-This project is part of a replication package for academic research.  
-Please cite appropriately if you use it in your work.
