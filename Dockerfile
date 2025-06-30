@@ -20,6 +20,4 @@ RUN pip install --no-cache-dir wheel \
  && pip install --no-cache-dir lxml --use-pep517 \
  && pip install --no-cache-dir -r requirements.txt
 
- CMD ["sleep", "infinity"]
-# CMD ["python", "program/research_questions/rq1_detection_rate.py"]
-CMD ["python", "program/research_questions/rq3_diff_coverage_at_detection.py"]
+CMD ["sleep", "infinity"]
