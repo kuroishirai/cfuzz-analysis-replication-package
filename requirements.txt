@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+pyyaml
+GitPython
+requests
+beautifulsoup4
+lxml
+psycopg2-binary
+tqdm
+scipy
+seaborn
