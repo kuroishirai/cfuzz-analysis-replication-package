@@ -297,18 +297,12 @@ def main():
     session_indices = list(range(len(sessions_with_enough_data)))
     
     if len(median_trend) > 1:
-        pearson_avg = pearsonr(session_indices, average_trend)
-        pearson_median = pearsonr(session_indices, median_trend)
-        spearman_avg = spearmanr(session_indices, average_trend)
         spearman_median = spearmanr(session_indices, median_trend)
-
-        print("Pearson correlation (Session Index vs. Average):", pearson_avg)
-        print("Pearson correlation (Session Index vs. Median):", pearson_median)
-        print("Spearman correlation (Session Index vs. Average):", spearman_avg)
         print("Spearman correlation (Session Index vs. Median):", spearman_median)
     else:
         print("Not enough data points to calculate correlation of coverage trends.")
 
+    
     # Generate and save line plot for average and median trends
     print("Generating average/median line plot...")
     plt.figure(figsize=(6, 4))
